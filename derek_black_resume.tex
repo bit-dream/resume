@@ -4,7 +4,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -57,7 +57,20 @@
 
 \newcommand{\resumeItemNoTitle}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    #1 \vspace{-2pt}
+  }
+}
+
+\newcommand*\ruleline[1]{
+  \par\noindent{\makebox[\linewidth]{\hrulefill\hspace{1ex}\raisebox{-.8ex}{#1}\hspace{1ex}\hrulefill}}
+}
+
+\newcommand\NoIndent[1]{%
+  \par\vbox{\parbox[t]{\linewidth}{#1}}%
+}
+\newcommand{\resumeItemNoTitleHeading}[1]{
+  \item[]\footnotesize{
+    \textbf{\textit{#1}} \vspace{-2pt}
   }
 }
 
@@ -95,6 +108,11 @@
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\resumeLineBreak}{\vskip 0.4em}
 \newcommand{\resumeHeadingBreak}{\vskip 0px}
+\newcommand{\resumeListItemHeading}[1]{
+  \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item[]\resumeItemNoTitleHeading{#1}
+  \end{itemize}
+}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -142,39 +160,51 @@
     \resumeHeading
       {Altec}{Roanoke, VA}
       {Staff Controls Developer}{Aug 2017 - Present}
+      \resumeListItemHeading{Derrick and Crane Software}
       \resumeItemListStart
         \resumeItemNoTitle{
           Led and completed multiple major software releases for Altec derricks that added critical features need by Altec customers and other Altec engineers/associates.
         }
         \resumeItemNoTitle{
-          Developed software I/O mapping system for Altec derricks that allowed other Altec associates to more easily deploy custom unit applications without relying on special development and firmware re-releases, saving Altec countless man-hours across multiple teams and led to quicker product releases to Altec customers.
+          As a lead developer on multiple projects, have mentored developers on best practices, tooling, and conducted multiple design reviews.
         }
         \resumeItemNoTitle{
-          Aided in development of Derrick auto-calibration system that minimized unit ship out time
+          Developed fully contained system for lanyard detection that syncs state via CAN with other ECUs on Altec Cranes. Protects
+          operators from engaging in unsafe work practices by preventing unit motion and engaging visual and audible alarms.
         }
         \resumeItemNoTitle{
-          Integrated rotation interlock system into the Derrick product line to aid in safer unit usage for Altec customers.
+          Developed software I/O mapping system for Altec derricks that allowed other Altec associates to more easily deploy custom unit applications without relying on special development and firmware re-releases, 
+          saving Altec countless man-hours across multiple teams and led to quicker product releases to Altec customers.
         }
         \resumeItemNoTitle{
-          Released multiple internal tools and applications targeted at MATLAB/Simulink that saved other controls developers hundreds of hours of development time.
+          Aided in development of Derrick auto-calibration system that runs proprietary algorithm to detect function start-of-movement without manual intervetion, resulting in quicker unit ship-outs.
+        }
+        \resumeItemNoTitle{
+          Integrated rotation interlock system that performs zone calculations based on feedback from CAN encoders into the Derrick product line, aiding in safer unit usage for Altec customers.
+        }
+        \resumeItemListEnd \vspace*{-7pt}
+        \resumeListItemHeading{Web Development}
+        \resumeItemListStart
+        \resumeItemNoTitle{
+          Wrote and released multiple web pages leveraging HTML and Bootstrap for Altec's AXIS service tool. Pages are utilized and interacted with by customers, service technicians and other Altec associates across multiple product lines.
+        }
+        \resumeItemListEnd \vspace*{-7pt}
+        \resumeListItemHeading{Internal Applications and Application Development}
+        \resumeItemListStart
+        \resumeItemNoTitle{
+          Released multiple internal tools and applications targeted at MATLAB/Simulink that saved developers hundreds of hours of development time.
         }
         \resumeItemNoTitle{
           Deployed, developed, and managed internal application with MATLAB that enabled multiple teams within the Altec controls department to release, distribute, and aid with version management of internally developed tools.
         }
         \resumeItemNoTitle{
-          Designed logic with Python's pandas/numpy with datasets pulled via SQL/Amazon Athena to generate customer machine metrics and gather insights for future feature enhancements for existing Altec products.
+          Designed logic with Python's pandas/numpy with datasets pulled via SQL/Amazon Athena to generate customer machine metrics and gather insights for product enhancements.
         }
         \resumeItemNoTitle{
-          Wrote and released multiple web pages leveraging HTML and Bootstrap for Altec's AXIS service tool. Pages are utilized and interacted with by customers, service technicians and other Altec associates across multiple product lines.
+          Developed an LMAP (Load Moment Area Protection) validation application for Altec product engineering using Python with usage of Kvaser's canlib, Flask and a vanilla javascript front end to help automate manual testing of equipment.
         }
         \resumeItemNoTitle{
-          As a lead developer on multiple projects, have mentored developers on best practices, tooling, and conducted multiple design reviews.
-        }
-        \resumeItemNoTitle{
-          Development of LMAP (Load Moment Area Protection) validation application for Altec product engineering using Python with usage of Kvaser's canlib to help automate all manual testing.
-        }
-        \resumeItemNoTitle{
-          Used Python to develop web page release and staging tool that integrates with SVN to help speed up deployment for the Altec AXIS service tool.
+          Used Python to develop web page release and staging tool that integrates with SVN and an SQLite instance to help speed up deployment for the Altec AXIS service tool.
         }
       \resumeItemListEnd
 
@@ -187,8 +217,6 @@
       \resumeItemListStart
           \resumeItemNoTitle{}
           {Prepared and delivered 45 minute lab lectures for a class size of 30+ students}
-          \resumeItemNoTitle{}
-          {Held office hours to faciliate student growth in the classroom}
       \resumeItemListEnd
 
 
