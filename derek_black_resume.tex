@@ -5,6 +5,7 @@
 %------------------------
 
 \documentclass[letterpaper,10pt]{article}
+\fontsize{7}{10}\selectfont
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -30,7 +31,7 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -166,9 +167,6 @@
           Led and completed multiple major software releases for Altec derricks that added critical features needed by Altec customers and other Altec engineers/associates.
         }
         \resumeItemNoTitle{
-          Mentored developers on best practices, tooling, and conducted multiple design reviews as a lead developer on multiple projects.
-        }
-        \resumeItemNoTitle{
           Designed fully contained software system package for lanyard detection that syncs state via CAN bus with other ECUs on Altec Cranes. Protects
           operators from engaging in unsafe work practices by preventing unit motion and engaging visual and audible alarms.
         }
@@ -204,7 +202,7 @@
           Developed an LMAP (Load Moment Area Protection) validation application for Altec product engineering using Python with usage of Kvaser's canlib, Flask and a vanilla javascript front end to help automate manual testing of equipment.
         }
         \resumeItemNoTitle{
-          Used Python to develop web page release and staging tool that integrates with SVN and an SQLite instance to help speed up deployment for the Altec AXIS service tool.
+          Used Python to develop web page release and staging tool that integrates with SVN and an SQLite instance to help speed up deployment for the Altec AXIS service tool. Vanilla Javascript and Bulma utilized for the user interface.
         }
       \resumeItemListEnd
 
@@ -222,10 +220,15 @@
 
 %-----------PROJECTS-----------------
 \section{Projects}
-    \resumeProjects{CAN-DBC}{
-        Open source library deployed via NPM written in Typescript that aids in the parsing of Vector's ASCII based translation file used to apply identifying names, 
-        scaling, offsets, and defining information, to data transmitted within a CAN frame. \href{https://github.com/bit-dream/can-dbc}{\underline{\color{blue}{github.com/bit-dream/can-dbc}}} or
-        \href{https://www.npmjs.com/package/dbc-can}{\underline{\color{blue}{npmjs.com/package/dbc-can}}}
+    \resumeProjects{Candied}{
+        Open source Typescript library deployed via NPM that gives Typescript developers access to general purpose CAN tools, such as CAN database parsing (Vector DBC files), CAN message decoding and more. 
+        Leverages Rollup for isomorphic deployment and TSPeg (PEG style grammar) for the parser generator.
+        \href{https://github.com/bit-dream/candied}{\underline{\color{blue}{github.com/bit-dream/candied}}}
+    }
+    \resumeLineBreak
+    \resumeProjects{Candied App}{
+        Web app leveraging NextJS, React, Tailwind, D3, and the Candied library. Allows for visualization of Vector DBC files by displaying network nodes/messages as a directed graph via the D3 library.
+        Users can edit DBC files and decode raw CAN frames to their physical values. All react components leverage the Tailwind framework. Deployed with Vercel: \href{https://candied-app.vercel.app}{\underline{\color{blue}{https://candied-app.vercel.app}}}
     }
     \resumeLineBreak
     \resumeProjects{Cocktail Hour}{
@@ -238,6 +241,6 @@
 \section{Programming Skills}
       \textbf{Languages}{: MATLAB, Python, Javascript, Typescript, Simulink, SQL, \LaTeX}
       
-      \textbf{Technologies/Other}{: React, Next, Stateflow, CANape, HTML, CSS, Bootstrap, CAN, git, SVN}
+      \textbf{Technologies/Other}{: React, Next, Stateflow, CANape, HTML, CSS, Bootstrap, CAN, git, SVN, Tailwind, D3}
 
 \end{document}
