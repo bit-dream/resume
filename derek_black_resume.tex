@@ -75,7 +75,7 @@
   }
 }
 
-\newcommand{\resumeProjects}[2]{\textbf{#1} #2}
+\newcommand{\resumeProjects}[2]{\small\textbf{#1} #2}
 
 % Just in case someone needs a heading that does not need to be in a list
 \newcommand{\resumeHeading}[4]{
@@ -114,6 +114,7 @@
     \item[]\resumeItemNoTitleHeading{#1}
   \end{itemize}
 }
+
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -190,7 +191,7 @@
         \resumeListItemHeading{Internal Applications and Application Development}
         \resumeItemListStart
         \resumeItemNoTitle{
-          Built internal MATLAB tool to automate setup and building of (CCP) CAN calibration Protocol parameters, leveraging the Simulink API, saving developers hundreds of hours of development time.
+          Built internal MATLAB tool to automate setup and building of (CCP) CAN Calibration Protocol parameters, leveraging the Simulink API, saving developers hundreds of hours of development time.
         }
         \resumeItemNoTitle{
           Deployed, developed, and managed internal application with MATLAB that enabled multiple teams within the Altec controls department to release, distribute, and aid with version management of internally developed tools.
@@ -202,7 +203,7 @@
           Developed an LMAP (Load Moment Area Protection) validation application for Altec product engineering using Python with usage of Kvaser's canlib, Flask and a vanilla javascript front end to help automate manual testing of equipment.
         }
         \resumeItemNoTitle{
-          Used Python to develop web page release and staging tool that integrates with SVN and an SQLite instance to help speed up deployment for the Altec AXIS service tool. Vanilla Javascript and Bulma utilized for the user interface.
+          Used Python to develop web page release and staging tool that integrates with SVN and an SQLite instance to help speed up deployment for the Altec AXIS service tool. Vanilla Javascript and Bulma utilized for the user interface alongside Eel.
         }
       \resumeItemListEnd
 
@@ -222,13 +223,13 @@
 \section{Projects}
     \resumeProjects{Candied}{
         Open source Typescript library deployed via NPM that gives Typescript developers access to general purpose CAN tools, such as CAN database parsing (Vector DBC files), CAN message decoding and more. 
-        Leverages Rollup for isomorphic deployment and TSPeg (PEG style grammar) for the parser generator.
-        \href{https://github.com/bit-dream/candied}{\underline{\color{blue}{github.com/bit-dream/candied}}}
+        Leverages Rollup for isomorphic deployment, TSPeg (PEG style grammar) for the parser generator, Jest for testing, and CircleCI for continuous integration.
+        \href{https://github.com/bit-dream/candied}{\underline{\color{blue}{github.com/bit-dream/candied}}} or \href{https://www.npmjs.com/package/candied}{\underline{\color{blue}{npmjs.com/package/candied}}}.
     }
     \resumeLineBreak
     \resumeProjects{Candied App}{
         Web app leveraging NextJS, React, Tailwind, D3, and the Candied library. Allows for visualization of Vector DBC files by displaying network nodes/messages as a directed graph via the D3 library.
-        Users can edit DBC files and decode raw CAN frames to their physical values. All react components leverage the Tailwind framework. Deployed with Vercel: \href{https://candied-app.vercel.app}{\underline{\color{blue}{https://candied-app.vercel.app}}}
+        Users can edit DBC files and decode raw CAN frames to their physical values. All react components leverage the Tailwind framework and automated testing performed with Playwright. Deployed with Vercel: \href{https://candied-app.vercel.app}{\underline{\color{blue}{candied-app.vercel.app}}}
     }
     \resumeLineBreak
     \resumeProjects{Cocktail Hour}{
@@ -241,6 +242,6 @@
 \section{Programming Skills}
       \textbf{Languages}{: MATLAB, Python, Javascript, Typescript, Simulink, SQL, \LaTeX}
       
-      \textbf{Technologies/Other}{: React, Next, Stateflow, CANape, HTML, CSS, Bootstrap, CAN, git, SVN, Tailwind, D3}
+      \textbf{Technologies/Other}{: React, Next, Stateflow, CANape, HTML, CSS, Bootstrap, CAN, git, SVN, Tailwind, Jest, D3, PostgreSQL}
 
 \end{document}
