@@ -145,47 +145,51 @@
       {Staff Controls Developer}{Aug 2017 - Present}
         \resumeItemListStart
         \resumeItemNoTitle{
-          Designed and implemented a robust validation application for Altec's Load Moment Area Protection (LMAP) system using Python, Kvaser's canlib, Flask, and React. Leveraged Python to automate the sending and receiving of CAN messages by emulating hardware via multiple CAN buses, and used Flask to create RESTful API endpoints that enabled React to communicate with the backend. Integrated a user-friendly front-end to enable live data visualization and test management. This solution significantly reduced the production engineering team's manual testing workload, saving countless man-hours and streamlining the validation process.
+          Created a validation application for Altec's Load Moment Area Protection (LMAP) system that significantly reduced the production engineering team’s manual testing workload. Leveraged Python, Kvaser’s canlib, Flask, and React to automate the sending and receiving of CAN messages, and used Flask to create RESTful API endpoints that enabled React to communicate with the backend. Integrated a user-friendly front-end to enable live data visualization and test management.
         }
         \resumeItemNoTitle{
-          Used Python to develop web page release and staging tool that integrates with SVN and an SQLite instance to help speed up deployment for the Altec AXIS service tool. Vanilla Javascript and Bulma utilized for the user interface alongside Eel for javascript/python integration.
+          Created an internal tool using MATLAB, Simulink API, and App Designer that automated the setup and building of CAN Calibration Protocol (CCP) parameters, saving developers hundreds of hours of development time. The tool’s user-friendly front-end streamlines the process and exposes an API that allows other developers to quickly build out additional automation applications.
         }
         \resumeItemNoTitle{
-          Developed an internal tool using MATLAB, Simulink API, and App Designer that automated the setup and building of CAN Calibration Protocol (CCP) parameters, saving developers hundreds of hours of development time. The tool's user-friendly front-end streamlines the process and exposes an API that allows other developers to quickly build out additional automation applications. By leveraging this tool, the team has been able to significantly improve efficiency and reduce time-to-market for critical projects.
+          Spearheaded the deployment, development, and management of an internal application using MATLAB that facilitated the release, distribution, and version management of various internally developed tools across multiple teams within the Altec controls department. Improved collaboration and reduced the risk of errors or conflicts, resulting in increased productivity and better overall outcomes.
         }
         \resumeItemNoTitle{
-          Spearheaded the deployment, development, and management of an internal application using MATLAB that facilitated the release, distribution, and version management of various internally developed tools across multiple teams within the Altec controls department. By streamlining the release process and improving version control, this solution significantly improved collaboration and reduced the risk of errors or conflicts. As a result, teams were able to work more efficiently and effectively, contributing to increased productivity and better overall outcomes.
+          Developed a web page release and staging tool using Python, Vanilla JavaScript, Bulma, and Eel that integrated with SVN and an SQLite instance to speed up deployment for the Altec AXIS service tool.
         }
         \resumeItemNoTitle{
-          Utilized Python's pandas and numpy libraries to design logic that analyzed customer machine metrics and gathered insights for product enhancements. Leveraged SQL and Amazon Athena to efficiently pull large datasets, and utilized the boto3 library to seamlessly integrate with AWS services. By synthesizing complex data sources and generating valuable insights, this approach informed critical product decisions and drove continuous improvement efforts.
+          Utilized Python’s pandas and numpy libraries to analyze customer machine metrics, gather insights for product enhancements, and inform critical product decisions. Leveraged SQL and Amazon Athena to efficiently pull large datasets, and utilized the boto3 library to seamlessly integrate with AWS services.
         }
         \resumeItemNoTitle{
-          Designed fully contained software system package for lanyard detection that syncs state via CAN bus with other ECUs on Altec Cranes. Protects
-          operators from engaging in unsafe work practices by preventing unit motion and engaging visual and audible alarms.
-        }
-        \resumeItemNoTitle{
-          Developed software I/O mapping system with MATLAB/Simulink for Altec derricks that allowed other Altec associates to more easily deploy custom unit applications without relying on special development and firmware re-releases, 
-          saving Altec countless man-hours across multiple teams and led to quicker product releases to Altec customers.
-        }
-        \resumeItemNoTitle{
-          Aided in development of Derrick auto-calibration system that runs proprietary algorithm to detect function start-of-movement without manual intervetion, resulting in quicker unit ship-outs.
-        }
-        \resumeItemNoTitle{
-          Integrated rotation interlock system that performs zone calculations based on feedback from CAN encoders into the Derrick product line, aiding in safer unit usage for equipment operators.
+          Led the development of several software control systems and tools for Altec's equipment, including a lanyard detection package, I/O mapping system for Altec derricks, Derrick auto-calibration system, and rotation interlock system. Utilized advanced programming techniques with Matlab, Simulink, and Stateflow to design and implement complex algorithms, along with Embedded Coder to target Altec ECUs, resulting in significant improvements in safety, efficiency, and reliability.
         }
         \resumeItemNoTitle{
           Wrote and released multiple web pages leveraging HTML, Bootstrap, and custom CSS for Altec's AXIS service tool. Pages are utilized and interacted with by customers, service technicians and other Altec associates across multiple product lines.
         }
         \resumeItemListEnd
+        \resumeLineBreak
+
+    \resumeHeading
+    {Kansas State University}{Manhattan, KS}
+    {Lab Instructor - Control of Mechanical Systems}{Aug. 2016 - Aug. 2017}
+    \resumeLineBreak
+    \resumeItemListStart
+        \resumeItemNoTitle{
+          Conducted 45-minute lab lectures for 30+ students, demonstrating practical applications of control theory.
+        }
+        \resumeItemNoTitle{
+          Mentored students in programming concepts and development using MATLAB, resulting in improved performance in lab exercises and projects.
+        }
+        \resumeItemNoTitle{
+          Collaborated with course instructors to design and refine lab activities, enhancing the overall learning experience for students.
+        }
+    \resumeItemListEnd
 
 %-----------EDUCATION-----------------
 \section{Education}
     \resumeHeading
       {Kansas State University}{Manhattan, KS}
-      {Master of Science}{May 2017}
+      {Master of Science - Control Theory, Mechatronics, and Software Development}{May 2017}
       \resumeItemListStart
-        \resumeItem{Areas of Study}
-          {Control Theory, Mechatronics, and Software Development}
         \resumeItem{Thesis}
           {\href{https://krex.k-state.edu/dspace/handle/2097/38170}{\underline{\color{blue}{Development and feasibility of economical hardware and software in control theory application}}}}
       \resumeItemListEnd
@@ -199,26 +203,22 @@
 %-----------PROJECTS-----------------
 \section{Projects}
     \resumeProjects{CAN Tools Library}{
-        Open source Typescript library deployed via NPM that gives Typescript developers access to general purpose CAN tools, such as CAN database parsing (Vector DBC files), CAN message decoding and more. 
-        Leverages Rollup for isomorphic deployment, TSPeg (PEG style grammar) for the parser generator, Jest for testing, and CircleCI for continuous integration.
+      CAN Tools Library: Open source Typescript library deployed via NPM that gives Typescript developers access to general-purpose CAN tools, such as CAN database parsing (Vector DBC files) and CAN message decoding. Utilized Rollup for isomorphic deployment, TSPeg (PEG style grammar) for the parser generator, Jest for testing, and CircleCI for continuous integration. Check out the project on GitHub:
         \href{https://github.com/bit-dream/candied}{\underline{\color{blue}{github.com/bit-dream/candied}}} or \href{https://www.npmjs.com/package/candied}{\underline{\color{blue}{npmjs.com/package/candied}}}.
     }
     \resumeLineBreak
     \resumeProjects{DBC Editor Web App}{
-        Web app leveraging NextJS, React, Tailwind, D3, and the Candied library. Allows for visualization of Vector DBC files by displaying network nodes/messages as a directed graph via the D3 library.
-        Users can edit DBC files and decode raw CAN frames to their physical values. All react components leverage the Tailwind framework and automated testing performed with Playwright. Deployed with Vercel: \href{https://candied-app.vercel.app}{\underline{\color{blue}{candied-app.vercel.app}}}
+      DBC Editor Web App: Developed a web app that allows for the visualization and editing of Vector DBC files using NextJS, React, Tailwind, D3, and the Candied library. Implemented a directed graph visualization of network nodes/messages via the D3 library. Users can edit DBC files and decode raw CAN frames to their physical values. All React components leverage the Tailwind framework, and automated testing is performed with Playwright. Deployed with Vercel: \href{https://candied-app.vercel.app}{\underline{\color{blue}{candied-app.vercel.app}}}
     }
     \resumeLineBreak
     \resumeProjects{Cocktail Hour}{
-        Web app that generates uniquely crafted cocktail receipes based on keywords such as artists, albums, or events.
-        Front end developed with React/NextJS with Chakra UI. Backend written with Python utilizing FastAPI, Spacy for 
-        word vector similiarity score ranking, and PostgreSQL. Deployed with Docker on DigitalOcean. \href{https://www.cocktailhour.tk}{\underline{\color{blue}{cocktailhour.tk}}}
+      Developed a web app that generates uniquely crafted cocktail recipes based on keywords such as artists, albums, or events. The front end was developed with React/NextJS with Chakra UI, and the backend was written with Python utilizing FastAPI, Spacy for word vector similarity score ranking, and PostgreSQL. Deployed with Docker on DigitalOcean. Check out the project at \href{https://www.cocktailhour.tk}{\underline{\color{blue}{cocktailhour.tk}}}
     }
 
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
       \textbf{Languages}{: MATLAB, Python, Javascript, Typescript, Simulink, Stateflow, SQL, \LaTeX, C}
       
-      \textbf{Technologies}{: React, Next, CANape, HTML, CSS, Bootstrap, CAN, git, SVN, Tailwind, Jest, D3, PostgreSQL, Jira, GitHub/Azure}
+      \textbf{Technologies/Other}{: React, Next, CANape, HTML, CSS, Bootstrap, Bulma, CAN, git, SVN, Tailwind, Jest, D3, PostgreSQL, Jira, GitHub, Azure, Confluence, Pandas, Grafana, MacOS}
 
 \end{document}
