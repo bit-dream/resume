@@ -151,6 +151,9 @@
           Engineered an internal tool using MATLAB, Simulink API, and App Designer that automated the setup and building of CAN Calibration Protocol (CCP) parameters, saving developers hundreds of hours of development time. The tool's user-friendly front-end streamlines the process and exposes an API that allows other developers to quickly build out additional automation applications.
         }
         \resumeItemNoTitle{
+          Cross-compiled and developed a C++ application for a Telematics Control Unit on embedded Linux using ARMv7 architecture with the rapidcsv library, along side the module's GPIO for live input recording, enabling regression testing of Altec ECUs by replaying live CAN traffic via SocketCAN interface, revealing firmware regressions and facilitating patching prior to shipment.
+        }
+        \resumeItemNoTitle{
           Spearheaded the deployment, development, and management of an internal application using MATLAB that facilitated the release, distribution, and version management of various internally developed tools across multiple teams within the Altec controls department. Improved collaboration and reduced the risk of errors or conflicts, resulting in increased productivity and better overall outcomes.
         }
         \resumeItemNoTitle{
@@ -160,10 +163,17 @@
           Utilized Python’s pandas and numpy libraries to analyze customer machine metrics, gather insights for product enhancements, and inform critical product decisions. Leveraged SQL and Amazon Athena to efficiently pull large datasets, and utilized the boto3 library to seamlessly integrate with AWS services.
         }
         \resumeItemNoTitle{
-          Led the development of several software control systems and tools for Altec's equipment, including a lanyard detection package, I/O mapping system for Altec derricks, Derrick auto-calibration system, and rotation interlock system. Utilized advanced programming techniques with Matlab, Simulink, and Stateflow to design and implement complex algorithms, along with Embedded Coder to target Altec ECUs, resulting in significant improvements in safety, efficiency, and reliability.
+          Wrote and released multiple web pages leveraging HTML, Bootstrap, and custom CSS for Altec's AXIS service tool. Pages are utilized and interacted with by customers, service technicians and other Altec associates across multiple product lines.
         }
         \resumeItemNoTitle{
-          Wrote and released multiple web pages leveraging HTML, Bootstrap, and custom CSS for Altec's AXIS service tool. Pages are utilized and interacted with by customers, service technicians and other Altec associates across multiple product lines.
+          Designed fully contained software system package for lanyard detection that syncs state via CAN bus with other ECUs on Altec Cranes. Protects
+          operators from engaging in unsafe work practices by preventing unit motion and engaging visual and audible alarms. Developed with MATLAB/Simulink and targeted at embedded devices with Simulink Coder.
+        }
+        \resumeItemNoTitle{
+          Integrated rotation interlock system that performs zone calculations based on feedback from CAN encoders into the Derrick product line, aiding in safer unit usage for equipment operators.
+        }
+        \resumeItemNoTitle{
+          Created Simulink-based I/O mapping system for Altec derricks ECUs, enabling easier deployment of custom unit applications without firmware updates. Saved countless man-hours and sped up product releases for Altec customers.
         }
         \resumeItemListEnd
         \resumeLineBreak
@@ -178,9 +188,6 @@
         }
         \resumeItemNoTitle{
           Mentored students in programming concepts and development using MATLAB, resulting in improved performance in lab exercises and projects.
-        }
-        \resumeItemNoTitle{
-          Collaborated with course instructors to design and refine lab activities, enhancing the overall learning experience for students.
         }
     \resumeItemListEnd
 
@@ -203,22 +210,20 @@
 %-----------PROJECTS-----------------
 \section{Projects}
     \resumeProjects{CAN Tools Library}{
-      CAN Tools Library: Open source Typescript library deployed via NPM that gives Typescript developers access to general-purpose CAN tools, such as CAN database parsing (Vector DBC files) and CAN message decoding. Utilized Rollup for isomorphic deployment, TSPeg (PEG style grammar) for the parser generator, Jest for testing, and CircleCI for continuous integration. Check out the project on GitHub:
+      Open source Typescript library deployed via NPM that gives Typescript developers access to general-purpose CAN tools, such as CAN database parsing (Vector DBC files) and CAN message decoding. Utilized Rollup for isomorphic deployment, TSPeg (PEG style grammar) for the parser generator, Jest for testing, and CircleCI for continuous integration. Check out the project on GitHub:
         \href{https://github.com/bit-dream/candied}{\underline{\color{blue}{github.com/bit-dream/candied}}} or \href{https://www.npmjs.com/package/candied}{\underline{\color{blue}{npmjs.com/package/candied}}}.
     }
     \resumeLineBreak
     \resumeProjects{DBC Editor Web App}{
-      DBC Editor Web App: Developed a web app that allows for the visualization and editing of Vector DBC files using NextJS, React, Tailwind, D3, and the Candied library. Implemented a directed graph visualization of network nodes/messages via the D3 library. Users can edit DBC files and decode raw CAN frames to their physical values. All React components leverage the Tailwind framework, and automated testing is performed with Playwright. Deployed with Vercel: \href{https://candied-app.vercel.app}{\underline{\color{blue}{candied-app.vercel.app}}}
-    }
-    \resumeLineBreak
-    \resumeProjects{Cocktail Hour}{
-      Developed a web app that generates uniquely crafted cocktail recipes based on keywords such as artists, albums, or events. The front end was developed with React/NextJS with Chakra UI, and the backend was written with Python utilizing FastAPI, Spacy for word vector similarity score ranking, and PostgreSQL. Deployed with Docker on DigitalOcean. Check out the project at \href{https://www.cocktailhour.tk}{\underline{\color{blue}{cocktailhour.tk}}}
+      Developed a web app that allows for the visualization and editing of Vector DBC files using NextJS, React, Tailwind, D3, and the Candied library. Implemented a directed graph visualization of network nodes/messages via the D3 library. Users can edit DBC files and decode raw CAN frames to their physical values. All React components leverage the Tailwind framework, and automated testing is performed with Playwright. Deployed with Vercel: \href{https://candied-app.vercel.app}{\underline{\color{blue}{candied-app.vercel.app}}}
     }
 
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
-      \textbf{Languages}{: MATLAB, Python, Javascript, Typescript, Simulink, Stateflow, SQL, \LaTeX, C}
+      \textbf{Programming}{: MATLAB, Python, Javascript, Typescript, Simulink, Stateflow, SQL, \LaTeX, C, C++, HTML, CSS, Bash}
       
-      \textbf{Technologies/Other}{: React, Next, CANape, HTML, CSS, Bootstrap, Bulma, CAN, git, SVN, Tailwind, Jest, D3, PostgreSQL, Jira, GitHub, Azure, Confluence, Pandas, Grafana, Node,  MacOS}
+      \textbf{Library/Frameworks}{: React, Next, Bootstrap, Bulma, Tailwind, Jest, D3, PostgreSQL, Pandas, Node, PyQt}
+
+      \textbf{Technologies/Other}{: git, SVN, CAN, CANape, CANoe, Jira, GitHub, Azure, Confluence, Grafana, Linux, MacOS, WSL}
 
 \end{document}
